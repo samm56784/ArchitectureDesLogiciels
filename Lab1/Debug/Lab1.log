@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\Architecture des logiciels\Lab1\Lab1\Lab1\main.cpp(5,1): warning C4326: le type de retour de 'main' doit être 'int' au lieu de 'void'
+D:\Architecture des logiciels\Lab1\Lab1\Lab1\main.cpp(47,18): warning C4101: 'evCode' : variable locale non référencée
+  Lab1.vcxproj -> D:\Architecture des logiciels\Lab1\Lab1\Debug\Lab1.exe
