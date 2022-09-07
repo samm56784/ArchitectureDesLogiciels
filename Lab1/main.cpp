@@ -3,15 +3,7 @@
 using namespace std;
 void main(void)
 {
-    REFERENCE_TIME rtNow = 0 * ONE_SECOND, rtEnd;
-    int code = 0;
-    char lettre = 'Z';
-    BSTR Video = SysAllocString(L"C:\\Example.avi");
-    FILTER_STATE state;
-    IGraphBuilder* pGraph = NULL;
-    IMediaControl* pControl = NULL;
-    IMediaEvent* pEvent = NULL;
-    IMediaSeeking* pSeeking = NULL;
+
     // Initialize the COM library.
     HRESULT hr = CoInitialize(NULL);
     if (FAILED(hr))
@@ -34,7 +26,7 @@ void main(void)
     hr = pGraph->QueryInterface(IID_IMediaSeeking, (void**)&pSeeking);
     // Build the graph. IMPORTANT: Change this string to a file on your system.
 
-    hr = pGraph->RenderFile(L"D:\\Example.avi", NULL);//****exe path change(choix fichier?)
+    hr = pGraph->RenderFile(L"D:\\rocket.avi", NULL);//****exe path change(choix fichier?)
     if (SUCCEEDED(hr))
     {
         //pControl.
@@ -44,8 +36,9 @@ void main(void)
         {
             //cas video marche et est en cours de lecture
             // Wait for completion.
-            while (ToucheEntrée())
-            {}
+            while (ToucheEntrée())//passer en entrée hr 
+            {
+            }
             // Note: Do not use INFINITE in a real application, because it
             // can block indefinitely.
         }
