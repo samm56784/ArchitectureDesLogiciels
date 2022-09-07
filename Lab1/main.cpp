@@ -3,9 +3,14 @@
 using namespace std;
 void main(void)
 {
-
+    
+    IGraphBuilder* pGraph = NULL;
+    IMediaControl* pControl = NULL;
+    IMediaEvent* pEvent = NULL;
+    IMediaSeeking* pSeeking = NULL;
     // Initialize the COM library.
    // HRESULT hr = CoInitialize(NULL);
+    HRESULT hr = CoInitialize(NULL);
     if (FAILED(hr))
     {
         printf("ERROR - Could not initialize COM library");
@@ -36,7 +41,7 @@ void main(void)
         {
             //cas video marche et est en cours de lecture
             // Wait for completion.
-            while (ToucheEntrée())//passer en entrée hr 
+            while (ToucheEntrée(hr, pGraph, pControl, pEvent, pSeeking))//passer en entrée hr 
             {
             }
             // Note: Do not use INFINITE in a real application, because it
