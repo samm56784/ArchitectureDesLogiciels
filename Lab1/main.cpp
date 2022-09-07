@@ -5,7 +5,7 @@ void main(void)
 {
 
     // Initialize the COM library.
-    HRESULT hr = CoInitialize(NULL);
+   // HRESULT hr = CoInitialize(NULL);
     if (FAILED(hr))
     {
         printf("ERROR - Could not initialize COM library");

@@ -1,5 +1,1 @@
-﻿  main.cpp
-C:\Users\sharvey27\Lab1\Lab1\fonctions.h(22,10): warning C4101: 'evCode' : variable locale non référencée
-C:\Users\sharvey27\Lab1\Lab1\main.cpp(5,1): warning C4326: le type de retour de 'main' doit être 'int' au lieu de 'void'
-C:\Users\sharvey27\Lab1\Lab1\fonctions.h(70): warning C4715: 'ToucheEntrée' : les chemins de contrôle ne retournent pas tous une valeur
-  Lab1.vcxproj -> C:\Users\sharvey27\Lab1\Debug\Lab1.exe
+﻿

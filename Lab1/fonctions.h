@@ -7,7 +7,7 @@ using namespace std;
 REFERENCE_TIME rtNow = 0 * ONE_SECOND, rtEnd;
 int code = 0;
 char lettre = 'Z';
-BSTR Video = SysAllocString(L"D:\\rocket.avi");
+//BSTR Video = SysAllocString(L"D:\\rocket.avi");
 FILTER_STATE state;
 IGraphBuilder* pGraph = NULL;
 IMediaControl* pControl = NULL;
