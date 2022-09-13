@@ -1,4 +1,5 @@
 #pragma once
+#include <conio.h>
 #include "fonctions.h"
 
 bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IMediaEvent* pEvent, IMediaSeeking* pSeeking)
@@ -10,12 +11,13 @@ bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IM
     hr = pSeeking->GetPositions(NULL, &rtEnd);
     while (lettre != 'Q')
     {
-        cin >> lettre;
+        lettre = _getch();
         lettre = toupper(lettre);
         switch (lettre)
         {
         case 'A':
             hr = pSeeking->SetRate(1.25);
+            cout << "A - Avance rapide (1,25x)\n";
             return true;
             break;
         case 'P':
@@ -23,10 +25,12 @@ bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IM
             if (state == State_Paused)
             {
                 hr = pControl->Run();
+                cout << "P - Play\n";
             }
             else
             {
                 hr = pControl->Pause();
+                cout << "P - Pause\n";
             }
             return true;
             break;
@@ -34,7 +38,7 @@ bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IM
             hr = pSeeking->SetRate(1.0);
             hr = pSeeking->SetPositions(&rtNow, AM_SEEKING_AbsolutePositioning, &rtEnd, AM_SEEKING_AbsolutePositioning);
             hr = pControl->Run();
-          
+            cout << "R - Retour au debut\n";
             return true;
             break;
         case 'Q':
@@ -45,6 +49,7 @@ bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IM
             return false;
             break;
         default:
+            cout << "Caractere invalide !\n";
             return true;
             break;
         }
