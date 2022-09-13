@@ -13,10 +13,10 @@ INSTRUCTIONS À SUIVRE
 
 6. Un vidéo partira avec une fenêtre noire pour inscrire les commandes
 
-7. Il suffit d'inscrire une commande voulue dans la fenêtre suivie de la touche ENTER
+7. Il suffit d'inscrire une commande voulue dans la fenêtre
 
 8. Voici les instructions des touches 
-P + ENTER – Play ou Pause
-A + ENTER – Avance accélérée (1.25x)
-R + ENTER – Retour au début
-Q + ENTER - Quitter
+P – Play ou Pause
+A – Avance accélérée (1.25x)
+R – Retour au début
+Q - Quitter
