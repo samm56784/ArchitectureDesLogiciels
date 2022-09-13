@@ -31,7 +31,7 @@ void main(void)
     hr = pGraph->QueryInterface(IID_IMediaSeeking, (void**)&pSeeking);
     // Build the graph. IMPORTANT: Change this string to a file on your system.
 
-    hr = pGraph->RenderFile(L"D:\\rocket.avi", NULL);//****exe path change(choix fichier?)
+    hr = pGraph->RenderFile(L"C:\\Example.avi", NULL);//****exe path change(choix fichier?)
     if (SUCCEEDED(hr))
     {
         //pControl.

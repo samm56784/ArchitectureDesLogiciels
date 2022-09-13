@@ -1,1 +1,7 @@
-﻿
+﻿  fonctions.cpp
+C:\Users\Utilisateur\Projets Université\ArchitectureDesLogiciels\Lab1\fonctions.cpp(9,10): warning C4101: 'evCode' : variable locale non référencée
+  main.cpp
+C:\Users\Utilisateur\Projets Université\ArchitectureDesLogiciels\Lab1\main.cpp(5,1): warning C4326: le type de retour de 'main' doit être 'int' au lieu de 'void'
+  Génération de code en cours...
+C:\Users\Utilisateur\Projets Université\ArchitectureDesLogiciels\Lab1\fonctions.cpp(52): warning C4715: 'ToucheEntrée' : les chemins de contrôle ne retournent pas tous une valeur
+  Lab1.vcxproj -> C:\Users\Utilisateur\Projets Université\ArchitectureDesLogiciels\x64\Debug\Lab1.exe
