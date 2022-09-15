@@ -1,5 +1,5 @@
 INSTRUCTIONS À SUIVRE
-
+***À noter qu'il sera nécessaire d'avoir un environnement de programmation comprenant le kit de développement logiciel (SDK) Windows, pour l'utilisation de Direct Show
 
 1. Téléchargez la vidéo fournie sur Moodle et l'enregistrer sous : Ce PC->Disque Local (C:)
 
