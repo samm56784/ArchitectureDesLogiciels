@@ -2,7 +2,7 @@
 #include <conio.h>
 #include "fonctions.h"
 
-bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IMediaEvent* pEvent, IMediaSeeking* pSeeking)
+void ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IMediaEvent* pEvent, IMediaSeeking* pSeeking)
 {
     REFERENCE_TIME rtNow=0, rtEnd;
     char lettre = 'Z';
@@ -18,7 +18,6 @@ bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IM
         case 'A':
             hr = pSeeking->SetRate(1.25);
             cout << "A - Avance rapide (1,25x)\n";
-            return true;
             break;
         case 'P':
             hr = pControl->GetState(0, (OAFilterState*)&state);
@@ -32,25 +31,21 @@ bool ToucheEntrée(HRESULT hr, IGraphBuilder* pGraph, IMediaControl* pControl, IM
                 hr = pControl->Pause();
                 cout << "P - Pause\n";
             }
-            return true;
             break;
         case 'R':
             hr = pSeeking->SetRate(1.0);
             hr = pSeeking->SetPositions(&rtNow, AM_SEEKING_AbsolutePositioning, &rtEnd, AM_SEEKING_AbsolutePositioning);
             hr = pControl->Run();
             cout << "R - Retour au debut\n";
-            return true;
             break;
         case 'Q':
             pControl->Release();
             pEvent->Release();
             pGraph->Release();
             CoUninitialize();
-            return false;
             break;
         default:
             cout << "Caractere invalide !\n";
-            return true;
             break;
         }
 

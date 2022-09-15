@@ -4,5 +4,5 @@
 #include <iostream>
 using namespace std;
 
-bool ToucheEntrée(HRESULT, IGraphBuilder*, IMediaControl*, IMediaEvent*, IMediaSeeking*);
+void ToucheEntrée(HRESULT, IGraphBuilder*, IMediaControl*, IMediaEvent*, IMediaSeeking*);
 
